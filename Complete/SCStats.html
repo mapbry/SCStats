@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html id="main">
+
+    
+<script>
+
+    function loadStats() {
+        
+       
+        document.getElementById("billready").innerHTML = XMLHttpRequest.BPAGENTNOTREADY;
+            
+        };
+        xhttp.open("GET", "test.xml", true);
+        xhttp.send();
+    }
+    
+</script>
+    
+    
+
+<head>
+   
+   <script type="text/javascript">
+   function convertSeconds(secs) {
+   var minutes = secs / 60
+   if (minutes < 1) {
+      minutes = 0
+   }
+   var seconds = secs - (parseInt(minutes) * 60)
+   seconds = ((seconds < 10) ? "0" : "") + seconds
+   document.write(parseInt(minutes) + ":" + seconds)
+}
+    </script>
+   
+    <style>
+    @font-face {
+            font-family: Kirvy;
+            src: url(Kirvy/Kirvy-Regular.otf)
+        }
+        
+        #main {
+            background-image: url(images/bg_light-Linen.png);
+        }
+        
+        #leftcol {
+            line-height: 30px;
+            height: 100%;
+            width: 69vw;
+            float: left;
+        }
+        
+        #rightcol {
+            width: 24vw;
+            height: 1027px;
+            float: right;
+            border-left: 2px solid gray;
+            padding: 20px;
+        }
+        
+        #group {
+            border-bottom: 2px solid gray;
+            padding: 20px;
+            width: 100%;
+            height: 172px;
+        }
+        
+        p {
+            font-size: 140%;
+        }
+        
+        div {
+            font-family: Kirvy;
+            color: black;
+        }
+        
+        h1 {
+            color: black
+        }
+        
+        h2 {
+            font-family: Kirvy;
+        }
+        
+        #statsdiv {
+            height: 120px;
+            width: 200px;
+            font-weight: bold;
+            font-size: 700%;
+        }
+        
+        
+        
+        
+        
+        
+        #billready {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 25px;
+            top: 148px;
+        }
+        
+        #billnot {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 260px;
+            top: 148px;
+        }
+        
+        #billtalking {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 485px;
+            top: 148px;
+        }
+        
+        #billcalls {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 700px;
+            top: 148px;
+        }
+        
+        #billhandled {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 925px;
+            top: 148px;
+        }
+                #billoldest {
+            width: 350px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 600%;
+            font-weight: bold;
+            text-align: center;
+            left: 1070px;
+            top: 148px;
+        }
+        
+
+        
+        
+        
+        
+        #accountready {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 25px;
+            top: 360px;
+        }
+        
+        #accountnot {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 260px;
+            top: 360px;
+        }
+        
+        #accounttalking {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 485px;
+            top: 360px;
+        }
+        
+        #accountcalls {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 700px;
+            top: 360px;
+        }
+        
+        #accounthandled {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 925px;
+            top: 360px;
+        }
+                #accountoldest {
+            width: 350px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 600%;
+            font-weight: bold;
+            text-align: center;
+            left: 1070px;
+            top: 360px;
+        }
+        
+        
+        
+        
+                #bankready {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 25px;
+            top: 572px;
+        }
+        
+        #banknot {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 260px;
+            top: 572px;
+        }
+        
+        #banktalking {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 485px;
+            top: 572px;
+        }
+        
+        #bankcalls {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 700px;
+            top: 572px;
+        }
+        
+        #bankhandled {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 925px;
+            top: 572px;
+        }
+                #bankoldest {
+            width: 350px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 600%;
+            font-weight: bold;
+            text-align: center;
+            left: 1070px;
+            top: 572px;
+        }
+        
+                
+        
+        
+        
+                #serviceready {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 25px;
+            top: 784px;
+        }
+        
+        #servicenot {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 260px;
+            top: 784px;
+        }
+        
+        #servicetalking {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 485px;
+            top: 784px;
+        }
+        
+        #servicecalls {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 700px;
+            top: 784px;
+        }
+        
+        #servicehandled {
+            width: 150px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 925px;
+            top: 784px;
+        }
+                #serviceoldest {
+            width: 350px;
+            height: 90px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 600%;
+            font-weight: bold;
+            text-align: center;
+            left: 1070px;
+            top: 784px;
+        }
+        
+                
+                
+        
+        
+        
+         #spanishready {
+            width: 150px;
+            height: 75px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 25px;
+            top: 996px;
+        }
+        
+        #spanishnot {
+            width: 150px;
+            height: 75px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 260px;
+            top: 996px;
+        }
+        
+        #spanishtalking {
+            width: 150px;
+            height: 75px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 485px;
+            top: 996px;
+        }
+        
+        #spanishcalls {
+            width: 150px;
+            height: 75px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 700px;
+            top: 996px;
+        }
+        
+        #spanishhandled {
+            width: 150px;
+            height: 75px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 925px;
+            top: 996px;
+        }
+                #spanisholdest {
+            width: 350px;
+            height: 75px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 600%;
+            font-weight: bold;
+            text-align: center;
+            left: 1070px;
+            top: 996px;
+        }
+                
+        
+         #overallReady {
+            width: 150px;
+            height: 75px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 1585px;
+            top: 85px;
+        }
+        
+        #overallNot {
+            width: 150px;
+            height: 75px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 1585px;
+            top: 230px;
+        }
+        
+        #overallTalking {
+            width: 150px;
+            height: 75px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 1585px;
+            top: 375px;
+        }
+        
+        #overallCalls {
+            width: 150px;
+            height: 75px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 1585px;
+            top: 528px;
+        }
+        
+        #overallHandled {
+            width: 150px;
+            height: 75px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 700%;
+            font-weight: bold;
+            text-align: center;
+            left: 1585px;
+            top: 678px;
+        }
+                #overallOldest {
+            width: 350px;
+            height: 75px;
+            position: absolute;
+            font-family: Kirvy;
+            font-size: 900%;
+            font-weight: bold;
+            text-align: center;
+            left: 1480px;
+            top: 820px;
+        }
+        
+        
+        
+        
+
+        
+        .colorbx{
+            position: absolute;
+            width: 24px;
+            height: 180px;
+            margin: 5px;
+
+        }
+        
+        
+    }
+    </style>
+</head>
+
+<body onload="loadStats()">
+    
+   
+   <img src="images/uccu_logo_icon.png" alt="UCCU" style="width:108px;height:124px;position:absolute; left:1770px; " >
+    
+    <div class="colorbx" style="background-color:#13b4ff; left:-3px; top:18px"></div>
+    <div class="colorbx" style="background-color:#13b4ff; left:1378px; top:18px"></div>
+    
+    <div class="colorbx" style="background-color:#00CD65; left:-3px; top:233px"></div>
+    <div class="colorbx" style="background-color:#00CD65; left:1378px; top:233px"></div>
+    
+    <div class="colorbx" style="background-color:#13b4ff; left:-3px; top:448px"></div>
+    <div class="colorbx" style="background-color:#13b4ff; left:1378px; top:448px"></div>
+    
+    <div class="colorbx" style="background-color:#00CD65; left:-3px; top:663px"></div>
+    <div class="colorbx" style="background-color:#00CD65; left:1378px; top:663px"></div>
+    
+    <div class="colorbx" style="background-color:#13b4ff; left:-3px; top:878px"></div>
+    <div class="colorbx" style="background-color:#13b4ff; left:1378px; top:878px"></div>
+    
+
+    <div id="rightcol">
+
+        <h1 style="position:relative; top:-30px;">Overall Statistics</h1>
+        
+        <p style="position:absolute; text-align: center; top:50px; font-size: 140%; left: 1560px;">Agents Ready <br><br><br><br><br> Agents Not Ready <br><br><br><br><br> Agents Talking <br><br><br><br><br> Calls in Queue <br><br><br><br><br> Total Calls Handled <br><br><br><br><br> Oldest Overall</p>   
+         
+        <div id="overallReady"></div>
+        <div id="overallNot"></div>
+        <div id="overallTalking"></div>
+        <div id="overallCalls"></div>
+        <div id="overallHandled"></div>
+        <div id="overallOldest"></div>
+
+
+</div>
+
+
+
+    <div id="leftcol">
+        <div id="group">
+            <h1 style="position:relative; left; top:-30px; ">Bill Pay</h1>
+            <p style="position:relative; top:-30px; font-size: 140%;">Agents Ready &emsp;&emsp; Agents Not Ready &emsp;&emsp; Agents Talking &emsp;&emsp; Calls in Queue &emsp;&emsp; Total Calls Handled &emsp;&emsp; Oldest In Queue</p>
+
+            <div id="billready"></div>
+            <div id="billnot">%bpAgentReady%</div>
+            <div id="billtalking">%bpAgentTalking%</div>
+            <div id="billcalls">%bpCallsQueued%</div>
+            <div id="billhandled">%bpCallsHandled%</div>            
+            <div id="billoldest">
+            <script>
+            var tempSecs_ba = %bpOldestQueue%
+            convertSeconds(tempSecs_ba)
+                </script>
+            </div>
+            
+
+        </div>
+
+        <div id="group">
+            <h1 style="position:relative; left; top:-30px; ">Online Account Opening</h1>
+            <p style="position:relative; top:-30px; font-size: 140%;">Agents Ready &emsp;&emsp; Agents Not Ready &emsp;&emsp; Agents Talking &emsp;&emsp; Calls in Queue &emsp;&emsp; Total Calls Handled &emsp;&emsp; Oldest In Queue</p>
+
+            <div id="accountready">%oaAgentNotReady%</div>
+            <div id="accountnot">%oaAgentReady%</div>
+            <div id="accounttalking">%oaAgentTalking%</div>
+            <div id="accountcalls">%oaCallsQueued%</div>
+            <div id="accounthandled">%oaCallsHandled%</div>
+            <div id="accountoldest">
+            <script>
+            var tempSecs_oa = %oaOldestQueue%
+            convertSeconds(tempSecs_oa)
+                </script>
+            </div>
+       
+        </div>
+
+        <div id="group">
+            <h1 style="position:relative; left; top:-30px; ">Online Banking</h1>
+            <p style="position:relative; top:-30px; font-size: 140%;">Agents Ready &emsp;&emsp; Agents Not Ready &emsp;&emsp; Agents Talking &emsp;&emsp; Calls in Queue &emsp;&emsp; Total Calls Handled &emsp;&emsp; Oldest In Queue</p>
+
+            <div id="bankready">%obAgentNotReady%</div>
+            <div id="banknot">%obAgentReady%</div>
+            <div id="banktalking">%obAgentTalking%</div>
+            <div id="bankcalls">%obCallsQueued%</div>
+            <div id="bankhandled">%obCallsHandled%</div>
+            <div id="bankoldest">
+            <script>
+            var tempSecs_ob = %obOldestQueue%
+            convertSeconds(tempSecs_ob)
+                </script>
+            </div>
+       
+        </div>
+
+        <div id="group">
+            <h1 style="position:relative; left; top:-30px;">Service </h1>
+            <p style="position:relative; top:-30px; font-size: 140%;">Agents Ready &emsp;&emsp; Agents Not Ready &emsp;&emsp; Agents Talking &emsp;&emsp; Calls in Queue &emsp;&emsp; Total Calls Handled &emsp;&emsp; Oldest In Queue</p>
+            
+            <div id="serviceready">%sAgentNotReady%</div>
+            <div id="servicenot">%sAgentReady%</div>
+            <div id="servicetalking">%sAgentTalking%</div>
+            <div id="servicecalls">%sCallsQueued%</div>
+            <div id="servicehandled">%sCallsHandled%</div>
+            <div id="serviceoldest">
+            <script>
+            var tempSecs_s = %sOldestQueue%
+            convertSeconds(tempSecs_s)
+                </script>
+            </div>
+
+        </div>
+
+        <div id="group" style="border-bottom: 0px;">
+            <h1 style="position:relative; left; top:-30px;">Spanish </h1>
+            <p style="position:relative; top:-30px; font-size: 140%;">Agents Ready &emsp;&emsp; Agents Not Ready &emsp;&emsp; Agents Talking &emsp;&emsp; Calls in Queue &emsp;&emsp; Total Calls Handled &emsp;&emsp; Oldest In Queue</p>
+            
+            <div id="spanishready">%spAgentNotReady%</div>
+            <div id="spanishnot">%spAgentReady%</div>
+            <div id="spanishtalking">%spAgentTalking%</div>
+            <div id="spanishcalls">%spCallsQueued%</div>
+            <div id="spanishhandled">%spCallsHandled%</div>
+            <div id="spanisholdest">
+            <script>
+            var tempSecs_sp = %spOldestQueue%
+            convertSeconds(tempSecs_sp)
+                </script>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+
+</html>
+
+<script>
+
+    var bp_AgentNotReady = %bpAgentNotReady%
+    var oa_AgentNotReady = %oaAgentNotReady%
+    
+        
+        
+    var totCallsHandled = bp_CallsHandled + os_CallsHandled + ob_CallsHandled + s_CallsHandled + sp_CallsHandled
+    
+</script>
+
+
+<!-- 
+bp – Bill Pay
+oa – Online Account Opening
+ob – Online Banking
+s – Service
+sp - Spanish
+
+bpAgentNotReady
+bpAgentReady
+bpAgentTalking
+bpCallsQueued
+bpCallsHandled
+bpOldestQueue
+
+These then repeat for each queue.  Just replace the bp for the one you want.
+-->
